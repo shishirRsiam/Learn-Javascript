@@ -1,11 +1,11 @@
 const print = console.log
 
 
-// let name = prompt("Enter Your Name:")
-// let age = prompt("Enter Your Age:")
+let name = prompt("Enter Your Name:")
+let age = prompt("Enter Your Age:")
 
-// print(name)
-// print(age)
+print(name)
+print(age)
 
 
 let number = prompt("Enter The Number:")
