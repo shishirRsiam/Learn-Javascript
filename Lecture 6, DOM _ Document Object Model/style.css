@@ -1,0 +1,23 @@
+h1 {
+    color: blue;
+}
+
+h4 {
+    color: blue;
+}
+
+body {
+    background-color: #f2f2f2;
+    text-emphasis: unset;
+}
+
+p {
+    text-align: justify;
+    columns: auto;
+    color: blueviolet;
+}
+
+button {
+    color: wheat;
+    background-color: #2b442c;
+}
