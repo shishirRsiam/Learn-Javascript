@@ -1,0 +1,13 @@
+.button {
+    color: white;
+    background: red;
+    font-size: 30px;
+}
+
+
+div {
+    background-color: rgb(226, 204, 204);
+    height: 100px;
+    width: 200px;
+    border: 2px solid black;
+}
