@@ -12,7 +12,7 @@ let winPatterns =
     [0, 4, 8], [2, 4, 6]];
 
 Array.from(boxes.children).forEach((box) => {
-    box.addEventListener("dblclick", () => {
+    box.addEventListener("click", () => {
         if (turnX) {
             box.style.backgroundColor = "red"
             box.textContent = "X"
@@ -47,26 +47,26 @@ const checkWinner = () => {
             let winner = `Winner is ${box1}`
             print(winner)
             gameWinnerMsg(box1)
-            for (let box of boxes)
+            Array.from(boxes.children).forEach((box) => {
                 box.disabled = true
-            break
+            })
+            // break
         }
     }
 }
 
 const resetORnewGame = () => {
-    for (let box of boxes) {
+    Array.from(boxes.children).forEach((box) => {
         turnX = true
         box.textContent = ''
         box.disabled = false
-    }
+        box.style.backgroundColor = "#c5b0b0"
+    })
     winner.classList.add("hide")
     reset.classList.remove("hide")
 }
 
-reset.addEventListener("click", () => {
-    resetORnewGame()
-})
+reset.addEventListener("click", resetORnewGame)
 newGame.addEventListener("click", () => {
     resetORnewGame()
 })
