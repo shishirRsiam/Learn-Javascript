@@ -7,8 +7,20 @@ body {
     margin: 0;
 }
 
-.content {
-    width: 100%;
+main {
+    justify-content: center;
+    align-items: center;
+
+    button {
+        background-color: #c72525;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.container {
+    width: 500%;
     max-width: 240px;
     margin: 0 auto;
     text-align: center;
@@ -23,8 +35,8 @@ h1 {
 .box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    border-radius: 10px;
+    gap: 20px;
+    border-radius: 20px;
     border: none;
     justify-content: center;
     align-items: center;
@@ -32,17 +44,35 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
     background-color: rgb(147, 122, 89);
-
 }
 
-button {
+.box button {
     padding: 20px;
     font-size: 20px;
-    background-color: #f2f2f2;
+
+    background-color: #f8f5f5;
     border: 2px solid #333;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    color: rgb(246, 230, 230);
+}
+
+.reset-btn {
+    padding: 20px;
+    /* gap: 10px; */
+    /* background-color: #6f5959c8; */
+    /* font-size: 20px; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    height: 50px;
+    margin: auto;
+}
+
+.hide {
+    display: none;
 }
