@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Message Example</title>
+    <!-- Include SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+
+<body>
+
+    <!-- Button to trigger the success message -->
+    <button id="showSuccessBtn">Click me for success</button>
+
+    <!-- Include SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the button element
+            var showSuccessBtn = document.getElementById('showSuccessBtn');
+
+            // Add a click event listener to the button
+            showSuccessBtn.addEventListener('click', function () {
+                // Assume success_message and error_message are dynamically provided by Odoo
+                var successMessage = '<t t-esc="success_message"/>'; // Odoo will replace this with actual message
+                var errorMessage = '<t t-esc="error_message"/>';     // Odoo will replace this with actual message
+
+                // Check if there is a success message
+                if (successMessage) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Hello Sishir!',
+                        text: 'Rock-Paper-Scissors Game Start!',
+                        timer: 3000,
+                        showConfirmButton: true
+                    });
+                    timer(4000)
+                    window.location.href = 'index.html'
+                }
+
+                // Check if there is an error message
+                // if (errorMessage) {
+                //     Swal.fire({
+                //         icon: 'error',
+                //         title: 'Error!',
+                //         text: errorMessage,
+                //         timer: 3000,
+                //         showConfirmButton: false
+                //     });
+                // }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
