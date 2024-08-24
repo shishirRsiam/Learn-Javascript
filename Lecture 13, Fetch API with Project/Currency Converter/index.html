@@ -7,34 +7,66 @@
     <meta name="description" content="Currency Converter by shishirRsiam - Convert currencies easily and quickly.">
     <title>Currency Converter by shishirRsiam</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+
+    <template id="all-option">
+        <option value="US">USD</option>
+        <option value="BD">BDT</option>
+        <option value="EUR">EUR</option>
+        <option value="AUD">AUD</option>
+    </template>
 
     <div class="container">
         <h1 class="heading">Currency Converter</h1>
 
         <form action="getData">
-            <div class="amount">
-                <p>Enter Amount</p>
-                <input type="text" name="" id="" value="1">
-
-            </div>
-
             <div class="dropdown">
                 <div class="form">
                     <p>From</p>
+                    <div class="select-container">
+                        <img class="FORMflagImg" src="https://flagsapi.com/US/flat/64.png" alt="flag photo">
+                        <select name="from" id="from">
+                        </select>
+                    </div>
                 </div>
+                <i id="swap" class="fa-solid fa-arrow-right-arrow-left"></i>
                 <div class="to">
                     <p>To</p>
+                    <div class="select-container">
+                        <img class="TOflagImg" src="https://flagsapi.com/BD/flat/64.png" alt="flag photo">
+
+                        <select name="to" id="to"> </select>
+                    </div>
                 </div>
             </div>
 
-        </form>
+            <div class="amount">
+                <p>Enter Amount</p>
+                <input type="text" name="" id="amount" value="1">
+            </div>
 
+            <div class="msg">
+                <div class="emni">
+                    <div class="hed">
+                        <p class="pheader">1 USD = 119.49 BDT</p>
+                    </div>
+                    <p class="notemsg">Selected currency: USD, Conversion Rate: 119.4914 BDT</p>
+                </div>
+            </div>
+            <button id="submit">Convert</button>
+        </form>
     </div>
 
+    <script src="countryList.js"></script>
+    <script src="getDocument.js"></script>
+    <script src="funtion.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>
